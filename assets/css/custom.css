@@ -1,12 +1,11 @@
 body{
 	font-family: 'Raleway';
 	background: #74ebd5;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
-h1{
+h1,h2{
 	background: #2980b9;
 	color: white;
 	margin: 0;
@@ -14,6 +13,13 @@ h1{
 	text-transform: uppercase;
 	font-size: 24px;
 	font-weight: 400;
+}
+
+h2{
+	background: #fff;
+	color: #666;
+	font-size: 18px;
+	text-transform: none;
 }
 
 ul{
@@ -27,10 +33,11 @@ li{
 	height: 40px;
 	line-height: 40px;
 	color: #666;
+	border-bottom: 1px solid #f7f7f7;
 }
 
-li:nth-child(2n){
-	background: #f7f7f7;
+li:last-child {
+	border-bottom: none;
 }
 
 input{
@@ -49,7 +56,7 @@ input:focus{
 	outline: none;
 }
 
-ul span{
+ul .delete{
 	background: #e74c3c;
 	height: 40px;
 	margin-right: 20px;
@@ -58,6 +65,17 @@ ul span{
 	width: 0px;
 	opacity: 0;
 	display: inline-block;
+}
+
+ul .edit{
+	background: #4286f4;
+	height: 40px;
+	text-align: center;
+	color: white;
+	width: 0px;
+	opacity: 0;
+	display: inline-block;
+	float: right;
 }
 
 li:hover span{
@@ -73,6 +91,15 @@ li:hover span{
 	box-shadow: 0 0 3px rgba(0,0,0,0.1);
 }
 
+#clear{
+	float: right;
+}
+
+#filter:hover, #clear:hover{
+	color: #2980b9;
+	transition: 0.2s linear;
+}
+
 .completed{
 	color: gray;
 	text-decoration: line-through;
@@ -80,4 +107,8 @@ li:hover span{
 
 .fa-list-alt{
 	float: right;
+}
+
+.li-content:focus{
+	outline: none;
 }
